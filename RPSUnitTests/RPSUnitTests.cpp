@@ -1,5 +1,5 @@
 #include "pch.h"
-
+#include <string.h>
 #include "CppUnitTest.h"
 
 extern "C" char RockPaperSissors(char[], char[]);
@@ -13,7 +13,7 @@ namespace RPSUnitTests
 	public:
 		
 		//Test1
-		TEST_METHOD(RockBeatsSissorsTest)
+		TEST_METHOD(RockBeatsSissorsTestPlayer1Wins)
 		{
 			//Player choices
 			char playerOneChoice[] = "Rock"; //Player 1
@@ -27,7 +27,7 @@ namespace RPSUnitTests
 		}
 
 		//Test2
-		TEST_METHOD(PaperBeatsRockTest)
+		TEST_METHOD(PaperBeatsRockTestPlayer2Wins)
 		{
 			//Player choices
 			char playerOneChoice[] = "Rock"; //Player 1
@@ -113,15 +113,26 @@ namespace RPSUnitTests
 		//Test8
 		TEST_METHOD(InvalidNullTest)
 		{
+
+			//Result
+			char result = RockPaperSissors(0, 0);
+
+			//Compare return with result.
+			Assert::AreEqual('t', result);
+		}
+
+		//Test9
+		TEST_METHOD(PaperBeatsRockTestPlayer1Wins)
+		{
 			//Player choices
-			char playerOneChoice[] = "7"; //Player 1
-			char playerTwoChoice[] = "8"; //Player2
+			char playerOneChoice[] = "Paper"; //Player 1
+			char playerTwoChoice[] = "Rock"; //Player2
 
 			//Result
 			char result = RockPaperSissors(playerOneChoice, playerTwoChoice);
 
 			//Compare return with result.
-			Assert::AreEqual('i', result);
+			Assert::AreEqual('1', result);
 		}
 
 	};

@@ -1,31 +1,32 @@
 #include "utils.h"
 #include <stdio.h>
+#include <string.h>
 
 char RockPaperSissors(char playerOneInput[], char playerTwoInput[]) {
 	char gameResult = 'u';
 
 	//Player 1 Wins
-	if (playerOneInput == "Rock" && playerTwoInput == "Scissors") 
+	if (strcmp(playerOneInput, "Rock") == 0 && strcmp(playerTwoInput, "Scissors") == 0)
 		gameResult = '1';
 
-	else if (playerOneInput == "Paper" && playerTwoInput == "Rock") 
+	else if (strcmp(playerOneInput, "Paper") == 0 && strcmp(playerTwoInput, "Rock") == 0)
 		gameResult = '1';
 	
-	else if (playerOneInput == "Scissors" && playerTwoInput == "Paper") 
+	else if (strcmp(playerOneInput, "Scissors") == 0 && strcmp(playerTwoInput, "Paper") == 0)
 		gameResult = '1';
 
 	//Player 2 Wins
-	else if (playerTwoInput == "Rock" && playerOneInput == "Scissors") 
+	else if (strcmp(playerTwoInput, "Rock") == 0 && strcmp(playerOneInput, "Scissors") == 0)
 		gameResult = '2';
 	
-	else if (playerTwoInput == "Paper" && playerOneInput == "Rock") 
+	else if (strcmp(playerTwoInput, "Paper") == 0 && strcmp(playerOneInput, "Rock") == 0)
 		gameResult = '2';
 
-	else if (playerTwoInput == "Scissors" && playerOneInput == "Paper") 
+	else if (strcmp(playerTwoInput, "Scissors") == 0 && strcmp(playerOneInput, "Paper") == 0)
 		gameResult = '2';
 
 	//Tie
-	else if (playerOneInput == playerTwoInput) 
+	else if (strcmp(playerOneInput, playerTwoInput) == 0) 
 		gameResult = 't';
 
 	//Invalid
