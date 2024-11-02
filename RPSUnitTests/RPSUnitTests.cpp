@@ -1,7 +1,8 @@
 #include "pch.h"
+
 #include "CppUnitTest.h"
 
-extern "C" char RockPaperSissors(char playerOneInput[], char playerTwoInput[]);;
+extern "C" char RockPaperSissors(char[], char[]);
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

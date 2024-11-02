@@ -1,3 +1,3 @@
 #pragma once
 
-char RockPaperSissors(char playerOneInput[], char playerTwoInput[]);
+char RockPaperSissors(char[], char[]);
