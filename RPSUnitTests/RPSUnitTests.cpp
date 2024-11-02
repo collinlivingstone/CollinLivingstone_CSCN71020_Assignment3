@@ -13,20 +13,17 @@ namespace RPSUnitTests
 		
 		TEST_METHOD(RockandSissorsTest)
 		{
+			//Player choices
+			char playerOneChoice[] = "Rock"; //Player 1
+			char playerTwoChoice[] = "Sissors"; //Player2
 
+			//Result
+			char result = RockPaperSissors(playerOneChoice, playerTwoChoice);
 
-		}
-
-		TEST_METHOD(RockandSissorsTest)
-		{
-
-
-		}
-
-		TEST_METHOD(RockandSissorsTest)
-		{
-
+			//Compare return with result.
+			Assert::AreEqual('1', result);
 
 		}
+
 	};
 }
