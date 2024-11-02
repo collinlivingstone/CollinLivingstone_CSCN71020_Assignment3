@@ -17,7 +17,7 @@ namespace RPSUnitTests
 		{
 			//Player choices
 			char playerOneChoice[] = "Rock"; //Player 1
-			char playerTwoChoice[] = "Sissors"; //Player2
+			char playerTwoChoice[] = "Scissors"; //Player2
 
 			//Result
 			char result = RockPaperSissors(playerOneChoice, playerTwoChoice);
@@ -59,7 +59,7 @@ namespace RPSUnitTests
 		{
 			//Player choices
 			char playerOneChoice[] = "Paper"; //Player 1
-			char playerTwoChoice[] = "Sissors"; //Player2
+			char playerTwoChoice[] = "Scissors"; //Player2
 
 			//Result
 			char result = RockPaperSissors(playerOneChoice, playerTwoChoice);
